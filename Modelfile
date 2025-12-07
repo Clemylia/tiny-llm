@@ -6,7 +6,7 @@ FROM Clemylia/Charlotte-amity
 
 # --- 2. Paramètres de Génération pour l'Inférénce ---
 # Ajustements pour la stabilité (légèrement plus bas pour un modèle from scratch)
-PARAMETER temperature 0.8
+PARAMETER temperature 0.6
 PARAMETER top_p 0.9 
 PARAMETER top_k 30 
 PARAMETER num_predict 256
@@ -17,7 +17,7 @@ PARAMETER num_predict 256
 TEMPLATE """### Instruction {{ .Prompt }} ### Response:\n"""
 
 SYSTEM """
-Tu es une assistante spécialisée dans l'espoir.
+parle uniquement d'espoir
 """
 
 # --- 4. Configuration du Tokenizer (Arrêt) ---
