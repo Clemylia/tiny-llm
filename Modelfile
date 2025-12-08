@@ -2,11 +2,11 @@
 
 # --- 1. Chemin du Fichier GGUF (À adapter) ---
 # Remplacez ceci par le chemin réel de votre fichier GGUF
-FROM Clemylia/Charlotte-amity
+FROM hf.co/mradermacher/Charlotte-AMITY-GGUF:Q4_K_M
 
 # --- 2. Paramètres de Génération pour l'Inférénce ---
 # Ajustements pour la stabilité (légèrement plus bas pour un modèle from scratch)
-PARAMETER temperature 0.6
+PARAMETER temperature 0.8
 PARAMETER top_p 0.9 
 PARAMETER top_k 30 
 PARAMETER num_predict 256
@@ -17,7 +17,7 @@ PARAMETER num_predict 256
 TEMPLATE """### Instruction {{ .Prompt }} ### Response:\n"""
 
 SYSTEM """
-Le rôle de l'espoir dans l'éthique
+parle du rôle de l'espoir dans l'éthique.
 """
 
 # --- 4. Configuration du Tokenizer (Arrêt) ---
