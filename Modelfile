@@ -2,7 +2,7 @@
 
 # --- 1. Chemin du Fichier GGUF (À adapter) ---
 # Remplacez ceci par le chemin réel de votre fichier GGUF
-FROM hf.co/mradermacher/Melta-english-GGUF
+FROM hf.co/mradermacher/Charlotte-AMITY-GGUF
 
 # --- 2. Paramètres de Génération pour l'Inférénce ---
 # Ajustements pour la stabilité (légèrement plus bas pour un modèle from scratch)
